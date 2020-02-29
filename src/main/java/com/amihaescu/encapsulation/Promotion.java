@@ -1,12 +1,12 @@
-package com.amihaescu;
+package com.amihaescu.encapsulation;
 
 import java.time.LocalDate;
 
 public class Promotion {
 
-    Double discount;
-    LocalDate startDate;
-    LocalDate endDate;
+    private Double discount;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     public Promotion() {
     }
@@ -17,16 +17,11 @@ public class Promotion {
         this.endDate = endDate;
     }
 
-    public Double getDiscount() {
-        return discount;
+    public boolean isActive(LocalDate currentDate) {
+        return startDate.isBefore(currentDate) && endDate.isAfter(currentDate);
     }
 
-    public boolean isActive(LocalDate date) {
-        return startDate.isBefore(date) && endDate.isAfter(date);
-    }
-
-    public boolean isActive() {
+    public boolean isActive(){
         return isActive(LocalDate.now());
     }
-
 }

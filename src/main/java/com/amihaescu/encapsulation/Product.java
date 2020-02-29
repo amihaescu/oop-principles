@@ -1,4 +1,4 @@
-package com.amihaescu;
+package com.amihaescu.encapsulation;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,26 +10,29 @@ public class Product {
 
     private String title;
     private Double price;
-    private List<Promotion> promotionList;
+    private List<Promotion> promotions;
 
     public Product(String title, Double price) {
         this.title = title;
         this.price = price;
-        this.promotionList = new ArrayList<>();
     }
 
-    public Product(String title, Double price, List<Promotion> promotionList) {
+    public Product(String title, Double price, List<Promotion> promotions) {
         this.title = title;
         this.price = price;
-        this.promotionList = new ArrayList<>(promotionList);
+        this.promotions = new ArrayList<>(promotions);
     }
 
-    public List<Promotion> getPromotionList() {
-        return Collections.unmodifiableList(promotionList);
+    public List<Promotion> getPromotions() {
+        return Collections.unmodifiableList(promotions);
     }
 
-    public void setPromotionList(List<Promotion> promotionList) {
-        this.promotionList = new ArrayList<>(promotionList);
+    public void setPromotions(List<Promotion> promotions) {
+        this.promotions = new ArrayList<>(promotions);
+    }
+
+    public void addPromotion(Promotion promotion) {
+        this.promotions.add(promotion);
     }
 
     public String getTitle() {
@@ -48,9 +51,9 @@ public class Product {
         this.price = price;
     }
 
-    public List<Promotion> getActivePromotions(LocalDate currentDate) {
-        return promotionList.stream()
-                .filter(promotion -> promotion.isActive(currentDate))
+    public List<Promotion> getActivePromotions(LocalDate now) {
+        return this.promotions.stream()
+                .filter(promotion -> promotion.isActive(now))
                 .collect(Collectors.toList());
     }
 }
