@@ -1,7 +1,9 @@
-package com.amihaescu.encapsulation;
+/*
+ * Copyright 2020 Dell Inc. or its subsidiaries. All Rights Reserved.
+ */
+package com.amihaescu.encapsulation.products;
 
-import com.amihaescu.encapsulation.Product;
-import com.amihaescu.encapsulation.Promotion;
+
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -13,8 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ProductTest {
 
+
     @Test
-    void newProductEncapsulated() {
+    public void newProductEncapsulated() {
         Product product = new Product("Water", 1.50);
         product.getTitle().replace("a", "x");
         assertEquals("Water", product.getTitle());
@@ -66,10 +69,10 @@ public class ProductTest {
     void getActivePromotions() {
         List<Promotion> promotionList = new ArrayList<>();
         Promotion activePromotion = new Promotion(0.65,
-                LocalDate.of(2020, 1,1),
+                LocalDate.of(2020, 1, 1),
                 LocalDate.of(2020, 2, 28));
         Promotion inactivePromotion = new Promotion(0.15,
-                LocalDate.of(2020, 3,1),
+                LocalDate.of(2020, 3, 1),
                 LocalDate.of(2020, 3, 28));
         LocalDate now = LocalDate.of(2020, 2, 1);
         promotionList.add(inactivePromotion);

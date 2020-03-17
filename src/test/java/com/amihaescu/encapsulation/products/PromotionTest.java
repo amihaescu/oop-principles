@@ -1,4 +1,7 @@
-package com.amihaescu.encapsulation;
+/*
+ * Copyright 2020 Dell Inc. or its subsidiaries. All Rights Reserved.
+ */
+package com.amihaescu.encapsulation.products;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,11 +10,10 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
 public class PromotionTest {
 
     @Test
-    void promotionShouldBeActive(){
+    void promotionShouldBeActive() {
         LocalDate startDate = LocalDate.of(2020, 1, 1);
         LocalDate endDate = LocalDate.of(2020, 2, 28);
         LocalDate currentDate = LocalDate.of(2020, 2, 1);
@@ -21,7 +23,7 @@ public class PromotionTest {
     }
 
     @Test
-    void promotionShouldBeInactive(){
+    void promotionShouldBeInactive() {
         LocalDate startDate = LocalDate.of(2020, 1, 1);
         LocalDate endDate = LocalDate.of(2020, 2, 28);
         LocalDate currentDate = LocalDate.of(2019, 2, 1);
@@ -31,7 +33,7 @@ public class PromotionTest {
     }
 
     @Test
-    void promotionShouldBeActiveNow(){
+    void promotionShouldBeActiveNow() {
         LocalDate now = LocalDate.now();
         LocalDate startDate = now.minusDays(1);
         LocalDate endDate = now.plusDays(1);
