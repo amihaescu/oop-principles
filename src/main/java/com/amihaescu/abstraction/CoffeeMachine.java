@@ -1,5 +1,6 @@
 package com.amihaescu.abstraction;
 
+import com.amihaescu.abstraction.coffee.Coffee;
 import com.amihaescu.abstraction.makers.EspressoMaker;
 import com.amihaescu.abstraction.makers.FlatWhiteMaker;
 
@@ -19,7 +20,8 @@ public class CoffeeMachine {
                 return espressoMaker.makeCoffee(sugarAmount);
             case FLAT_WHITE:
                 return flatWhiteMaker.makeCoffee(sugarAmount);
+            default:
+                throw new IllegalArgumentException();
         }
-        return new Coffee(type, sugarAmount);
     }
 }
