@@ -1,5 +1,6 @@
 package com.amihaescu.abstraction;
 
+import com.amihaescu.abstraction.coffee.Coffee;
 import com.amihaescu.abstraction.makers.TestEspressoMaker;
 import com.amihaescu.abstraction.makers.TestFlatWhiteMaker;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,6 @@ public class CoffeeMachineTest {
     @Test
     void makeAmericano() {
         Coffee coffee = coffeeMachine.makeCoffee(AMERICANO, 0);
-        assertEquals(AMERICANO, coffee.getCoffeeType());
         assertEquals(0, coffee.getSugarLevel());
     }
 
