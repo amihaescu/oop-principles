@@ -5,7 +5,7 @@ import com.amihaescu.abstraction.coffee.Coffee;
 
 public class TestEspressoMaker implements EspressoMaker{
 
-    private static final String brand = "";
+    private static final String brand = "Test espresso maker";
     @Override
     public Coffee makeCoffee(Integer sugarLevel) {
         return new TestCoffee(sugarLevel, brand);

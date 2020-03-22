@@ -5,7 +5,7 @@ import com.amihaescu.abstraction.makers.TestEspressoMaker;
 import com.amihaescu.abstraction.makers.TestFlatWhiteMaker;
 import org.junit.jupiter.api.Test;
 
-import static com.amihaescu.abstraction.CoffeeType.AMERICANO;
+import static com.amihaescu.abstraction.CoffeeType.ESPRESSO;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CoffeeMachineTest {
@@ -17,8 +17,9 @@ public class CoffeeMachineTest {
 
     @Test
     void makeAmericano() {
-        Coffee coffee = coffeeMachine.makeCoffee(AMERICANO, 0);
+        Coffee coffee = coffeeMachine.makeCoffee(ESPRESSO, 0);
         assertEquals(0, coffee.getSugarLevel());
+        assertEquals("Test espresso maker", coffee.getBrand());
     }
 
 }
