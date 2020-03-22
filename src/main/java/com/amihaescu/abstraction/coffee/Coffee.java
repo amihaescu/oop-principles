@@ -18,4 +18,6 @@ public abstract class Coffee {
     public String getBrand() {
         return brand;
     }
+
+    public abstract String getDescription();
 }
