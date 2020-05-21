@@ -4,7 +4,6 @@ import com.amihaescu.inheritance.exceptions.TopGearException;
 
 public class SportsCar extends Car {
 
-
     public SportsCar(String make, String model) {
         super(make, model);
     }
