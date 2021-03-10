@@ -1,6 +1,3 @@
-/*
- * Copyright 2020 Dell Inc. or its subsidiaries. All Rights Reserved.
- */
 package com.amihaescu.encapsulation.immutable;
 
 import org.junit.jupiter.api.Test;
