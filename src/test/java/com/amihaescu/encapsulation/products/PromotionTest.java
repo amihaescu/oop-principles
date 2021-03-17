@@ -1,5 +1,6 @@
-package com.amihaescu.encapsulation;
+package com.amihaescu.encapsulation.products;
 
+import com.amihaescu.encapsulation.products.Promotion;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package com.amihaescu.encapsulation;
+package com.amihaescu.encapsulation.products;
 
 import java.time.LocalDate;
 

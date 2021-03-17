@@ -1,6 +1,5 @@
-package immutable;
+package com.amihaescu.encapsulation.immutable;
 
-import com.amihaescu.immutable.Color;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

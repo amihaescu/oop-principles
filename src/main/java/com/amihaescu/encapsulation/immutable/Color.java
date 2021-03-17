@@ -1,4 +1,4 @@
-package com.amihaescu.immutable;
+package com.amihaescu.encapsulation.immutable;
 
 public final class Color {
     private int red;

@@ -1,5 +1,7 @@
-package com.amihaescu.encapsulation;
+package com.amihaescu.encapsulation.products;
 
+import com.amihaescu.encapsulation.products.Product;
+import com.amihaescu.encapsulation.products.Promotion;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
